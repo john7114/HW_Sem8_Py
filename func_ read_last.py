@@ -16,8 +16,9 @@ def read_last(lines, file):
     if lines > 0 and type(lines) == int:
         with open(file, 'r', encoding='utf-8') as some_file:
             list_lines = some_file.read().splitlines()
-            for i in range(len(list_lines) - lines, len(list_lines)):
-                print(list_lines[i])
+            # for i in range(len(list_lines) - lines, len(list_lines)):
+            #     print(list_lines[i])
+            print(*list_lines[-lines:], sep='\n')
     else:
         print("Число строк должно быть положительным, целым числом")
 
